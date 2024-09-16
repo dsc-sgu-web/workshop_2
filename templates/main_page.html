@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="static/main_page_style.css"> <!-- Подключение CSS-файла -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">Pinterest</a>
+            </div>
+            <div class="nav-links">
+                <a href="/gallery">Галерея</a>
+                <a href="/create_post">Создать пост</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Раздел приветствия -->
+        <section class="welcome">
+            <h1>Добро пожаловать на нашу платформу!</h1>
+            <p>Ищите вдохновение или создавайте свои собственные коллекции изображений</p>
+            <a href="/create_post" class="btn-create">Создать пост</a>
+        </section>
+
+        <!-- Типичная информация о сайте с отдельными блоками -->
+        <section class="about">
+            <h2>О нашем сайте</h2>
+
+            <div class="about-block">
+                <h3>Наша миссия</h3>
+                <p>
+                    Мы стремимся создать пространство, где люди могут делиться вдохновением,
+                    обмениваться идеями и создавать собственные коллекции изображений.
+                </p>
+            </div>
+
+            <div class="about-block">
+                <h3>Как это работает</h3>
+                <p>
+                    Используйте наш удобный интерфейс для создания постов, добавления изображений и организации подборок по темам, которые вам интересны.
+                </p>
+            </div>
+
+            <div class="about-block">
+                <h3>Поддержка и сообщество</h3>
+                <p>
+                    Наше сообщество растет каждый день! Вы можете взаимодействовать с другими пользователями, комментировать и лайкать посты, а также находить новых единомышленников.
+                </p>
+            </div>
+        </section>
+
+        <!-- Раздел с фотографиями -->
+        <section class="photos">
+            <h2>Наши работы</h2>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Фото 1">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Фото 2">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x300" alt="Фото 3">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Название сайта. Все права защищены.</p>
+        <a href="/privacy">Политика конфиденциальности</a>
+    </footer>
+</body>
+</html>

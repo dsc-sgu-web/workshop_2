@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.name }}</title>
+    <link rel="stylesheet" href="/static/post_page_styles.css"> <!-- Подключаем стили -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">Pinterest</a>
+            </div>
+            <div class="nav-links">
+                <a href="/gallery">Галерея</a>
+                <a href="/create-post">Создать пост</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post-details">
+            <h1>{{ post.name }}</h1> <!-- Название поста -->
+            <img src="/{{ post.image_url }}" alt="{{ post.name }}" class="post-image"> <!-- Изображение поста -->
+            <p>{{ post.description }}</p> <!-- Описание поста -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Название сайта. Все права защищены.</p>
+        <a href="/privacy">Политика конфиденциальности</a>
+    </footer>
+</body>
+</html>
