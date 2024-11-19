@@ -1,14 +1,14 @@
 import json
 import os
 from typing import Annotated
-from uuid import UUID
 
 from fastapi import FastAPI, UploadFile, File, HTTPException, Depends, Form
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from starlette.requests import Request
 from fastapi.templating import Jinja2Templates
 from fastapi.encoders import jsonable_encoder
-from starlette.staticfiles import StaticFiles
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
@@ -63,6 +63,8 @@ async def upload_post(post: UploadPost = Depends(UploadPost.parse_form), image: 
     data_dump["image_url"] = image_location
     with open(post_location, "w+") as post_object:
         json.dump(data_dump, post_object)
+
+    return RedirectResponse("/gallery", status_code=302)
 
 
 @app.get("/gallery")
